@@ -10,10 +10,10 @@
       <ion-row>
         <ion-col size="12" size-sm="6" size-md="4" *ngFor="let item of listaMultimedia">
           <ion-card class="galeria-card">
-            <img [src]="item.url" alt="Imagen subida" />
+            <img [src]="item.urlImagen" alt="Imagen subida" />
             <ion-card-header>
               <ion-card-title>{{ item.texto }}</ion-card-title>
-              <ion-card-subtitle>{{ item.timestamp | date:'short' }}</ion-card-subtitle>
+              <ion-card-subtitle>{{ item.createdAt| date:'short' }}</ion-card-subtitle>
             </ion-card-header>
           </ion-card>
         </ion-col>
