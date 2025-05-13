@@ -26,7 +26,7 @@ export class ListPage implements OnInit {
       const snapshot = await getDocs(collection(fireDbGallery, 'registros'));
       const resultados = snapshot.docs.map(doc => doc.data() as Registro);
 
-      resultados.sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
+      resultados.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
       this.listaMultimedia = resultados;
 
       await Preferences.set({
