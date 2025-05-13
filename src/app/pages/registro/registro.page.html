@@ -18,10 +18,8 @@
         <ion-input [(ngModel)]="texto"></ion-input>
       </ion-item>
 
-      <!-- Botón para seleccionar imagen -->
-      <ion-button expand="block" color="primary" (click)="elegirImagen()">Seleccionar Imagen</ion-button>
+      <ion-button expand="block" color="primary" (click)="elegirImagen()">Agregar Imagen</ion-button>
 
-      <!-- Mensaje si no hay imagen -->
       <ion-text *ngIf="!urlImagen && !imagenBase64" color="medium">
         <p class="ion-padding-start">No has seleccionado una imagen aún.</p>
       </ion-text>
