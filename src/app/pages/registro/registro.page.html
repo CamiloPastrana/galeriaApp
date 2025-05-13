@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>Registrar Multimedia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card class="form-card">
+    <ion-card-header>
+      <ion-card-title>Sube tu imagen</ion-card-title>
+      <ion-card-subtitle>Agrega una descripción opcional</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <!-- Campo de texto -->
+      <ion-item lines="none">
+        <ion-label position="floating">Descripción</ion-label>
+        <ion-input [(ngModel)]="texto"></ion-input>
+      </ion-item>
+
+      <!-- Botón para seleccionar imagen -->
+      <ion-button expand="block" color="primary" (click)="elegirImagen()">Seleccionar Imagen</ion-button>
+
+      <!-- Mensaje si no hay imagen -->
+      <ion-text *ngIf="!urlImagen && !imagenBase64" color="medium">
+        <p class="ion-padding-start">No has seleccionado una imagen aún.</p>
+      </ion-text>
+
+      <!-- Vista previa de la imagen -->
+      <img *ngIf="imagenBase64" [src]="imagenBase64" class="preview-image" />
+
+      <!-- Botones de acción -->
+      <ion-button expand="block" color="success" (click)="capturarYRegistrar()">Guardar</ion-button>
+      <ion-button expand="block" fill="outline" color="medium" (click)="irAGaleria()">Ver Galería</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

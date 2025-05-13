@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  credenGalle: {
+    apiKey: "AIzaSyCRZAHINIc8I2xhf6cgoxr0bfjTCJLvKqU",
+    authDomain: "bdgallery-12ba6.firebaseapp.com",
+    projectId: "bdgallery-12ba6",
+    storageBucket: "bdgallery-12ba6.firebasestorage.app",
+    messagingSenderId: "810030150052",
+    appId: "1:810030150052:web:5a2c307426b79abc8f9131"
+ },
+  supabaseUrl: 'https://wxuhvrszdkutrzmccboz.supabase.co',
+  supabaseAnonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind4dWh2cnN6ZGt1dHJ6bWNjYm96Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDcxMDA1MTksImV4cCI6MjA2MjY3NjUxOX0.FC8816n3X811AWC59rEUp38lohfMM1LSqxd8wZaDXIA'
 };
 
 /*
